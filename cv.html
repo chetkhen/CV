@@ -1,399 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHET DevOp</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
-            --text-main: #334155;
-            --text-muted: #64748b;
-            --bg-body: #f8fafc;
-            --bg-card: #ffffff;
-            --border-color: #e2e8f0;
-            --radius: 16px;
-            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 5px 15px -5px rgba(0, 0, 0, 0.03);
-            --transition: all 0.3s ease;
-        }
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>CHET DevOp</title>  
+    <!-- Google Fonts -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <!-- FontAwesome for icons -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <!-- Link to External CSS -->  
+    <link rel="stylesheet" href="cv.css">  
+</head>  
+<body>  
+    <div class="resume-wrapper">  
+        <!-- Sidebar Section -->  
+        <aside class="sidebar">  
+            <div class="profile-container">  
+                <div class="avatar-frame">  
+                    <!-- High quality professional illustration / avatar placeholder -->  
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="chet Avatar" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=MH'">  
+                </div>  
+                <h1 class="profile-name">CHET BLUEWEB</h1>  
+                <p class="profile-role">DevOp Developer</p>  
+            </div>  
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+            <!-- Contact Information -->  
+            <div class="sidebar-section">  
+                <h3>Contact</h3>  
+                <ul class="contact-list">  
+                    <li class="contact-item">  
+                        <i class="fa-solid fa-location-dot"></i>  
+                        <span>2004 Street, PHNOM PENH, ST 12345</span>  
+                    </li>  
+                    <li class="contact-item">  
+                        <i class="fa-solid fa-phone"></i>  
+                        <span>0964929076</span>  
+                    </li>  
+                    <li class="contact-item">  
+                        <i class="fa-solid fa-envelope"></i>  
+                        <a href="mailto:khen.chet@2024gmail.com">khen.chet@2024gmail.com</a>  
+                    </li>  
+                    <li class="contact-item">  
+                        <i class="fa-solid fa-globe"></i>  
+                        <a href="https://www.chetblueweb.com" target="_blank">www.chetblueweb.com</a>  
+                    </li>  
+                </ul>  
+            </div>  
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
+            <!-- Skills Section -->  
+            <div class="sidebar-section">  
+                <h3>Core Skills</h3>  
+                <div class="sidebar-skills">  
+                    <span class="skill-badge">HTML</span>  
+                    <span class="skill-badge">CSS</span>  
+                    <span class="skill-badge">JavaScript</span>  
+                    <span class="skill-badge">Accessibility</span>  
+                    <span class="skill-badge">Figma to Design</span>  
+                    <span class="skill-badge">Responsive Design</span>  
+                    <span class="skill-badge">Technical Writing</span>  
+                    <span class="skill-badge">Presentation</span>  
+                </div>  
+            </div>  
+        </aside>  
 
-        .resume-wrapper {
-            max-width: 950px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            border: 1px solid var(--border-color);
-        }
+        <main class="main-content">  
+            <!-- Education Section -->  
+            <section class="main-section">  
+                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>  
+                <div class="timeline-item">  
+                    <h3 class="timeline-title">School Name, Location</h3>  
+                    <span class="timeline-date">Month 20xx to Month 20xx</span>  
+                    <p class="timeline-desc"><strong>Degree</strong> - List of exciting things you did at university, specialized in web interface creation and modern frontend frameworks.</p>  
+                </div>  
+            </section>  
 
-        @media (max-width: 768px) {
-            .resume-wrapper {
-                grid-template-columns: 1fr;
-            }
-            body {
-                padding: 15px;
-            }
-        }
-
-        .sidebar {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .profile-container {
-            text-align: center;
-        }
-
-        .avatar-frame {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .avatar-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-name {
-            font-size: 24px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .profile-role {
-            font-size: 14px;
-            color: #60a5fa;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .sidebar-section h3 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            color: #94a3b8;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 8px;
-        }
-
-        .contact-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 13px;
-            color: #cbd5e1;
-            word-break: break-all;
-        }
-
-        .contact-item i {
-            color: #60a5fa;
-            font-size: 15px;
-            margin-top: 3px;
-        }
-
-        .contact-item a {
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .contact-item a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
-        .sidebar-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-badge {
-            background: rgba(255, 255, 255, 0.08);
-            color: #e2e8f0;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: var(--transition);
-        }
-
-        .skill-badge:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .main-content {
-            padding: 45px 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-        }
-
-        .main-section h2 {
-            font-size: 18px;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .main-section h2 i {
-            color: var(--accent);
-            font-size: 16px;
-        }
-
-        .main-section h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 45px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid var(--border-color);
-            margin-bottom: 25px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .timeline-date {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 10px;
-            display: inline-block;
-            background: var(--accent-light);
-            padding: 2px 10px;
-            border-radius: 6px;
-        }
-
-        .timeline-desc {
-            font-size: 14px;
-            color: var(--text-main);
-            margin-bottom: 10px;
-        }
-
-        .achievements-list {
-            list-style-type: disc;
-            padding-left: 18px;
-            font-size: 14px;
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-bottom: 12px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
-        }
-
-        .tech-tag {
-            font-size: 11px;
-            background: #f1f5f9;
-            color: #475569;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .resume-footer {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        .resume-footer a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .resume-footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="resume-wrapper">
-        <!-- Sidebar Section -->
-        <aside class="sidebar">
-            <div class="profile-container">
-                <div class="avatar-frame">
-                    <!-- High quality professional illustration / avatar placeholder -->
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="chet  Avatar" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=MH'">
-                </div>
-                <h1 class="profile-name">CHET BLUEWEB</h1>
-                <p class="profile-role">DevOp Developer</p>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="sidebar-section">
-                <h3>Contact</h3>
-                <ul class="contact-list">
-                    <li class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>2004 Street,PHNOM PENH, ST 12345</span>
-                    </li>
-                    <li class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>0964929076</span>
-                    </li>
-                    <li class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:no_reply@example.com">khen.chet@2024gmail.com</a>
-                    </li>
-                    <li class="contact-item">
-                        <i class="fa-solid fa-globe"></i>
-                        <a href="https://www.chetblueweb.com" target="_blank">www.chetblueweb.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Skills Section -->
-            <div class="sidebar-section">
-                <h3>Core Skills</h3>
-                <div class="sidebar-skills">
-                    <span class="skill-badge">HTML</span>
-                    <span class="skill-badge">CSS</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">Accessibility</span>
-                    <span class="skill-badge">Figma to Design</span>
-                    <span class="skill-badge">Responsive Design</span>
-                    <span class="skill-badge">Technical Writing</span>
-                    <span class="skill-badge">Presentation</span>
-                </div>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <!-- Education Section -->
-            <section class="main-section">
-                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-                <div class="timeline-item">
-                    <h3 class="timeline-title">School Name, Location</h3>
-                    <span class="timeline-date">Month 20xx to Month 20xx</span>
-                    <p class="timeline-desc"><strong>Degree</strong> - List of exciting things you did at university, specialized in web interface creation and modern frontend frameworks.</p>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section class="main-section">
-                <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+            <!-- Experience Section -->  
+            <section class="main-section">  
+                <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>  
                 
-                <div class="timeline-item">
-                    <h3 class="timeline-title">Job Title <span style="font-weight: 400; color: var(--text-muted);">at Company Name, Location</span></h3>
-                    <span class="timeline-date">Month 20xx to Month 20xx</span>
-                    <ul class="achievements-list">
-                        <li>List of key achievements and contributions made to the team</li>
-                        <li>Delivered responsive user interfaces with optimal accessibility standards</li>
-                        <li>Collaborated closely with designers using Figma to ensure pixel-perfect design accuracy</li>
-                    </ul>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Figma</span>
-                    </div>
-                </div>
+                <div class="timeline-item">  
+                    <h3 class="timeline-title">Job Title <span style="font-weight: 400; color: var(--text-muted);">at Company Name, Location</span></h3>  
+                    <span class="timeline-date">Month 20xx to Month 20xx</span>  
+                    <ul class="achievements-list">  
+                        <li>List of key achievements and contributions made to the team</li>  
+                        <li>Delivered responsive user interfaces with optimal accessibility standards</li>  
+                        <li>Collaborated closely with designers using Figma to ensure pixel-perfect design accuracy</li>  
+                    </ul>  
+                    <div class="tech-tags">  
+                        <span class="tech-tag">HTML5</span>  
+                        <span class="tech-tag">CSS3</span>  
+                        <span class="tech-tag">JavaScript</span>  
+                        <span class="tech-tag">Figma</span>  
+                    </div>  
+                </div>  
 
-                <div class="timeline-item" style="margin-top: 25px;">
-                    <h3 class="timeline-title">Job Title <span style="font-weight: 400; color: var(--text-muted);">at Company Name, Location</span></h3>
-                    <span class="timeline-date">Month 20xx to Month 20xx</span>
-                    <ul class="achievements-list">
-                        <li>List of key achievements and technical technical writing projects</li>
-                        <li>Assisted in building responsive frontend layouts and components</li>
-                        <li>Participated in code reviews and team presentations</li>
-                    </ul>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Responsive Design</span>
-                        <span class="tech-tag">Accessibility</span>
-                        <span class="tech-tag">Presentation</span>
-                    </div>
-                </div>
-            </section>
+                <div class="timeline-item" style="margin-top: 25px;">  
+                    <h3 class="timeline-title">Job Title <span style="font-weight: 400; color: var(--text-muted);">at Company Name, Location</span></h3>  
+                    <span class="timeline-date">Month 20xx to Month 20xx</span>  
+                    <ul class="achievements-list">  
+                        <li>List of key achievements and technical writing projects</li>  
+                        <li>Assisted in building responsive frontend layouts and components</li>  
+                        <li>Participated in code reviews and team presentations</li>  
+                    </ul>  
+                    <div class="tech-tags">  
+                        <span class="tech-tag">Responsive Design</span>  
+                        <span class="tech-tag">Accessibility</span>  
+                        <span class="tech-tag">Presentation</span>  
+                    </div>  
+                </div>  
+            </section>  
 
-            <!-- Footer / Copyright -->
-            <footer class="resume-footer">
-                <p>Copyright &copy; 2026 by <a href="https://www.chetblueweb.com" target="_blank">www.chetblueweb.com</a></p>
-                <p>All rights reserved.</p>
-            </footer>
-        </main>
-    </div>
-</body>
+            <!-- Footer / Copyright -->  
+            <footer class="resume-footer">  
+                <p>Copyright &copy; 2026 by <a href="https://www.chetblueweb.com" target="_blank">www.chetblueweb.com</a></p>  
+                <p>All rights reserved.</p>  
+            </footer>  
+        </main>  
+    </div>  
+</body>  
 </html>
